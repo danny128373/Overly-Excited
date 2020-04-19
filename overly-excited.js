@@ -27,9 +27,42 @@
 
 //If the current value of the counter variable can be evenly divided by 3 (using the JavaScript remainder operator) add a single exclamation point (!) to the current word in the array.
 
+// let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
+
+// function addExcitement(theWordArray) {
+//   let buildMeUp = ""
+
+//   for (let i = 0; i < theWordArray.length; i++) {
+//     /*
+//         If the current word's place (not index) in the array
+//         is evenly divisible by 3, add an exclamation point
+//         to the end of the word and then concatenate it to
+//         `buildMeUp`.
+
+//         Otherwise, just concatenate the word itself.
+//      */
+//     if (((i + 1) % 3) === 0) {
+//       buildMeUp += sentence[i] + "!" + " ";
+//     } else {
+//       buildMeUp += sentence[i] + " ";
+//     }
+
+//     // Print buildMeUp to the console
+//     console.log(buildMeUp);
+//   }
+
+// }
+
+// addExcitement(sentence);
+
+//Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an 
+//exclamation point.
+
+// I want to use a question mark
+
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon"];
 
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, character) {
   let buildMeUp = ""
 
   for (let i = 0; i < theWordArray.length; i++) {
@@ -42,7 +75,7 @@ function addExcitement(theWordArray) {
         Otherwise, just concatenate the word itself.
      */
     if (((i + 1) % 3) === 0) {
-      buildMeUp += sentence[i] + "!" + " ";
+      buildMeUp += sentence[i] + character + " ";
     } else {
       buildMeUp += sentence[i] + " ";
     }
@@ -53,4 +86,4 @@ function addExcitement(theWordArray) {
 
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?")
